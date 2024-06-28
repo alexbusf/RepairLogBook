@@ -13,7 +13,7 @@ This project is designed to manage and track equipment malfunctions efficiently.
 3. composer install
 4. php artisan migrate
 5. php artisan db:seed --class=PermissionTableSeeder
-6. php artisan db:seed --class=PermissionTableSeeder
+6. php artisan db:seed --class=CreateAdminUserSeeder
 7. php artisan serve
 
 ```bash

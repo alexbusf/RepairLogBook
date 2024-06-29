@@ -108,17 +108,22 @@ class UserController extends Controller
             $input = Arr::except($input,array('password'));    
         }
 
+        //закомметировать
+
         if (User::find($id)->getRoleNames()->contains('Admin'))
         {
-            return redirect()->route('users.index')->with('success','User role cannot be updates');
+            return redirect()->route('users.index')->with('success','Admin updated successfully');
+            //return redirect()->route('users.index')->with('success','User role cannot be updates');
         }
     
+        //раскомметировать
         // $user = User::find($id);
         // $user->update($input);
         // DB::table('model_has_roles')->where('model_id',$id)->delete();
     
         // $user->assignRole($request->input('roles'));
 
+        //закомметировать
         // Находим пользователя
         $user = User::find($id);
 
